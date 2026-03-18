@@ -141,3 +141,44 @@ positive_number_count = 0
 
 ############################
 
+# Sorting a list of lists/tuples by the second element 
+# - key= → Python asks: “What value should I use to compare items?”
+# - lambda x: → defines a tiny anonymous function that takes one argument (x)
+# - x[1] → returns the second element of that item
+
+a = [(1, 3), (4, 1), (2, 2)]
+sorted_list = sorted(a, key=lambda x: x[1])
+
+# Sort in descending order
+# sorted_list = sorted(a, key=lambda x: x[1], reverse=True)
+
+# Using .sort() to sort in place
+
+a.sort(key=lambda x: x[1])
+print(sorted_list)
+
+############################
+
+
+# Sorting a dict 
+# a = [{"name": "A", "score": 10},
+#      {"name": "B", "score": 5},
+#      {"name": "C", "score": 8}]
+
+# sorted_list = sorted(a, key=lambda x: x["score"])
+# print(sorted_list)
+
+
+##############################
+
+# ENUMERATE
+
+# a = [0,5,2] # it can be list/set/tuple
+# enumerate(a) creates an enumerate object, but it does not convert it to a list or print anything.
+# so you have wrap it up with list or set or list 
+
+# print(list(enumerate(a))) # [(0,0), (1,5), (2,2)]
+# print(set(enumerate(a)) ) # {(0,0), (1,5), (2,2)}
+# print(tuple(enumerate(a))) # ((0,0), (1,5), (2,2))
+
+
